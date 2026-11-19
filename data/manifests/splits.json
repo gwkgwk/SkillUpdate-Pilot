@@ -1,0 +1,34 @@
+{
+  "dataset_id": "skillupdatebench-pilot-v1",
+  "group_key": "base_skill_id",
+  "seed": 20251117,
+  "splits": {
+    "test": [
+      "pilot-data-join",
+      "pilot-document-template",
+      "pilot-image-caption",
+      "pilot-pdf-outline",
+      "pilot-project-status"
+    ],
+    "train": [
+      "pilot-data-clean",
+      "pilot-data-profile",
+      "pilot-document-convert",
+      "pilot-document-summarize",
+      "pilot-image-resize",
+      "pilot-image-watermark",
+      "pilot-pdf-merge",
+      "pilot-pdf-metadata",
+      "pilot-project-plan",
+      "pilot-project-scaffold"
+    ],
+    "validation": [
+      "pilot-data-validate",
+      "pilot-document-review",
+      "pilot-image-organize",
+      "pilot-pdf-watermark",
+      "pilot-project-changelog"
+    ]
+  },
+  "strategy": "stratified_by_function_type_2_train_1_validation_1_test"
+}

@@ -1,0 +1,60 @@
+{
+  "method": "HSDA_GRAPH_LLM_DECISION",
+  "model": "deepseek-flash",
+  "thinking": "disabled",
+  "seed": 20251117,
+  "max_requests": 11,
+  "max_output_tokens": 3000,
+  "max_input_tokens": 100000,
+  "timeout_seconds": 90,
+  "dynamic_verification": false,
+  "dataset_commit": "7af3c962202bdb34f5e7647c555fe29d6c83a85a",
+  "selection": [
+    {
+      "update_id": "GSU-0442",
+      "category": "REAL_UPDATE_UNLABELED"
+    },
+    {
+      "update_id": "GSU-0435",
+      "category": "REAL_UPDATE_UNLABELED"
+    },
+    {
+      "update_id": "GSU-0141",
+      "category": "REAL_UPDATE_UNLABELED"
+    },
+    {
+      "update_id": "GSU-0294",
+      "category": "REAL_UPDATE_UNLABELED"
+    },
+    {
+      "update_id": "GSU-0433",
+      "category": "REAL_UPDATE_UNLABELED"
+    },
+    {
+      "update_id": "MASC-0127",
+      "category": "MALICIOUS_SOURCE_UPDATE"
+    },
+    {
+      "update_id": "MSBU-0017",
+      "category": "MALICIOUS_SOURCE_UPDATE"
+    },
+    {
+      "update_id": "MSCU-0001",
+      "category": "MALICIOUS_SOURCE_UPDATE"
+    },
+    {
+      "update_id": "MSBU-0003",
+      "category": "MALICIOUS_SOURCE_UPDATE"
+    },
+    {
+      "update_id": "MASC-0151",
+      "category": "MALICIOUS_SOURCE_UPDATE"
+    },
+    {
+      "update_id": "MCU-0001",
+      "category": "CONFIRMED_INSTRUCTION_INTRODUCTION"
+    }
+  ],
+  "ground_truth_given_to_model": false,
+  "purpose": "First bounded real-model validation, not comparative performance"
+}

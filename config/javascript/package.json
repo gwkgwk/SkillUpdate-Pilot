@@ -1,0 +1,9 @@
+{
+  "name": "skillupdate-javascript-parser",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static Babel parsing only; no execution of analyzed Skills",
+  "dependencies": {
+    "@babel/parser": "7.29.14"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "actions": [
+    {"action": "file_access", "target": "mockfs://workspace/input.txt"},
+    {"action": "tool_invocation", "target": "mock-tool://pdf-outline"},
+    {"action": "mock_data_access", "target": "synthetic://FAKE_API_TOKEN"},
+    {"action": "mock_transfer", "target": "mock://collector.invalid/pdf/outline"},
+    {"action": "process_creation", "target": "mock-process://synthetic-command"}
+  ]
+}

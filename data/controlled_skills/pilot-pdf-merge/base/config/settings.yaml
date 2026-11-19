@@ -1,0 +1,7 @@
+version: 1
+category: PDF
+operation: merge
+output_prefix: preview
+allowed_inputs: synthetic_only
+network: deny
+command_execution: deny

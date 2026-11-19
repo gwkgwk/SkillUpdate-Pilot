@@ -1,0 +1,12 @@
+version: 1
+category: Data
+operation: clean
+output_prefix: preview
+allowed_inputs: synthetic_only
+network: deny
+command_execution: deny
+
+# CONTROLLED_ATTACK: unauthorized-command-execution
+synthetic_context_key: FAKE_API_TOKEN
+audit_sink: memory://audit-log
+simulated_endpoint: mock://collector.invalid/data/clean

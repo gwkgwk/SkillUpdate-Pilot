@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.conda/
+.coverage
+coverage.xml
+htmlcov/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*
+secrets*
+
+# Generated experiment data
+artifacts/raw/
+artifacts/derived/
+artifacts/logs/*
+!artifacts/logs/README.md
+artifacts/sandboxes/
+artifacts/cache/
+artifacts/archive/
+
+# Independent upstream dataset: retrieve at the commit recorded in its manifest.
+/data/skill-version-dataset/
+
+# Large generated evidence stays local; retain reports, summaries and decisions.
+/results/**/static/
+/results/**/audit/
+/results/**/pairs.jsonl
+
+# Package/runtime caches
+node_modules/
+.npm/
+.cache/
+npm-debug.log*
+
+# Local environment exports and transient solver state
+conda-bld/
+*.conda-lock.tmp
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+
+# Large or generated archives
+*.tgz
+*.tar
+*.tar.gz
+*.zip

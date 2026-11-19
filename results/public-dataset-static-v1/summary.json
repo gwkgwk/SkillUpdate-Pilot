@@ -1,0 +1,18 @@
+{
+  "pairs": 537,
+  "b1_status_by_source": {
+    "REAL_UPDATE_UNLABELED": {
+      "BENIGN": 499,
+      "SUSPICIOUS": 1
+    },
+    "MALICIOUS_SOURCE_UPDATE": {
+      "BENIGN": 36
+    },
+    "CONFIRMED_INSTRUCTION_INTRODUCTION": {
+      "BENIGN": 1
+    }
+  },
+  "static_failures": [],
+  "completed_at": "2026-11-19T13:31:50.929305+00:00",
+  "limitation": "Alert rates only: neither unlabeled real updates nor source membership establish pair-level ground truth."
+}

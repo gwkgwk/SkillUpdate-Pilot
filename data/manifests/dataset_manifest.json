@@ -1,0 +1,880 @@
+{
+  "counts": {
+    "base_skills": 20,
+    "benign_updates": 20,
+    "malicious_updates": 20,
+    "snapshots": 60
+  },
+  "dataset_id": "skillupdatebench-pilot-v1",
+  "function_types": {
+    "Data": 4,
+    "Document": 4,
+    "Image": 4,
+    "PDF": 4,
+    "Project": 4
+  },
+  "limitations": [
+    "Pilot dataset; not suitable for large-scale statistical performance claims.",
+    "Malicious updates are synthetic controlled fixtures, not observed attacks.",
+    "Fixtures must not be executed outside a separately approved future sandbox stage."
+  ],
+  "required_snapshot_files": [
+    "SKILL.md",
+    "references/usage.md",
+    "scripts/main.py",
+    "scripts/helper.py",
+    "config/settings.yaml"
+  ],
+  "safety": {
+    "host_command_execution": false,
+    "in_memory_audit_only": true,
+    "mock_endpoints_only": true,
+    "real_credentials": false,
+    "real_network": false
+  },
+  "schema_version": "1.0",
+  "seed": 20251117,
+  "snapshots": [
+    {
+      "base_skill_id": "pilot-data-clean",
+      "files": {
+        "SKILL.md": "938b1ed13430eeebeceaf12379742eaf9fcf2ce95316116e2716108e618ee690",
+        "config/settings.yaml": "dd6476d7964643d18484afcc8806a96eef59f8a2c58df81d5d5931b2dc149f1d",
+        "references/usage.md": "45889346d9d36430069cb97a9f79f9ce376e31e8cddc59a7bd0e25e64399cd43",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "ad9a72183b11325ed0c2d3cce4b16c12f447cdc6d1f07d609dd7cc483af2187f"
+      },
+      "relative_path": "controlled_skills/pilot-data-clean/base",
+      "sha256": "d17f6f1887979c03d29f7fc3e5d45cf9887290d3663ddd0a330ee0b1c0c7ffb8",
+      "snapshot_id": "pilot-data-clean:base:d17f6f188797",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-data-clean",
+      "files": {
+        "SKILL.md": "08a5b232d2ffcd4ac691c41d06033c2f42bca9f1a923265c04dd0413bae39c9a",
+        "config/settings.yaml": "b8faee209222b4fbc2fd9977238c083b36e2af5e1e3863871715e58ea9cd7246",
+        "references/usage.md": "45889346d9d36430069cb97a9f79f9ce376e31e8cddc59a7bd0e25e64399cd43",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "96fb6105da4b48489b8543b8d3e7d60943fa9ef5adbfaa45234af1287736c924"
+      },
+      "relative_path": "controlled_skills/pilot-data-clean/benign_update",
+      "sha256": "f7ce6b7663ca6f88a8446426971c4d5f5645eaa8c4ee662c86222d1c460d95d6",
+      "snapshot_id": "pilot-data-clean:benign_update:f7ce6b7663ca",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-data-clean",
+      "files": {
+        "SKILL.md": "e47cbaa07c9ff6912eb1ccc425413ff06c01b5ef12247b6d304d225aad450d03",
+        "config/settings.yaml": "191b0e4ba6f338c0e1c0d7d867f390b160e80734afab5d3260050f4a5ab7ec6c",
+        "references/usage.md": "c8494446b9222b43df4ae87dbc85837aeb2dca84b649ec789e553a5ebeff5748",
+        "scripts/helper.py": "d4281305f609e358905cee652644e5a786c637119cf8dae61f21a1bc9f0a4012",
+        "scripts/main.py": "f549bc86b5ff3b3c71f769679a94dfea1a8ae033341091330883aad2f1d7a801"
+      },
+      "relative_path": "controlled_skills/pilot-data-clean/malicious_update",
+      "sha256": "8c50359847f757d240e5835353f6e9cc0da408aaaa4851842a56133b95aeb1cb",
+      "snapshot_id": "pilot-data-clean:malicious_update:8c50359847f7",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-data-join",
+      "files": {
+        "SKILL.md": "e4192b233f32dbec4f9b33d28e4970ed6eca6db798c8881f81154847b8e6d725",
+        "config/settings.yaml": "78d99f479144ea695c0bc1f56ba2740573db26c8a94d8e3e244eda5c57f4c8bc",
+        "references/usage.md": "8be3a75fe7ffb24e45972fd0c8e7c9d8e695cd48ffd2af6a6e7a3afd04bf0977",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "e6d8533ce8e455ecf6d0b159ca4af90de3eb7f4f3ae7b482ed45a9273159cde0"
+      },
+      "relative_path": "controlled_skills/pilot-data-join/base",
+      "sha256": "1a129b604f826dba231b52eec121e3dd7ab50f19227d95685f95730edab6be04",
+      "snapshot_id": "pilot-data-join:base:1a129b604f82",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-data-join",
+      "files": {
+        "SKILL.md": "ced7f90464ba2bd5ee64ca680db2441edd562afc54288c9c84c6c1343de2d884",
+        "config/settings.yaml": "78d99f479144ea695c0bc1f56ba2740573db26c8a94d8e3e244eda5c57f4c8bc",
+        "references/usage.md": "8be3a75fe7ffb24e45972fd0c8e7c9d8e695cd48ffd2af6a6e7a3afd04bf0977",
+        "scripts/helper.py": "fab3b9dacff61ebe7be52121e5621e066ab6bb0588943b6913f7d9fbf7d892dc",
+        "scripts/main.py": "e6d8533ce8e455ecf6d0b159ca4af90de3eb7f4f3ae7b482ed45a9273159cde0"
+      },
+      "relative_path": "controlled_skills/pilot-data-join/benign_update",
+      "sha256": "0d6656f561f180c69e84b64c1638f79a696f2d0768465b91b3fec920307e078a",
+      "snapshot_id": "pilot-data-join:benign_update:0d6656f561f1",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-data-join",
+      "files": {
+        "SKILL.md": "59d305d5d739afac8f385191b1ab5830a27a9941a6b3e0ec44e78bb18d830d46",
+        "config/settings.yaml": "7ba89cf29a3429caff5c10b62063965948e08f47b6dcf125d00d90cb7edb0e96",
+        "references/usage.md": "e4bda3ffe0c3532eaf5345d7424b27ac25f1e6938e57c68dd618b4944f0de4d0",
+        "scripts/helper.py": "7de7e8f805823999ecd21c48970b9ba28642889ba2590482ab94ef3a9bbc5b05",
+        "scripts/main.py": "2f910370ff8749cea33e98bc56208e77190fada5c8a3634fd9064a6d3c930dc1"
+      },
+      "relative_path": "controlled_skills/pilot-data-join/malicious_update",
+      "sha256": "e59b0feaaab5832deca87a3b6e2eb1ca60970da2a7f54290a871dbb91d9f580a",
+      "snapshot_id": "pilot-data-join:malicious_update:e59b0feaaab5",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-data-profile",
+      "files": {
+        "SKILL.md": "87a9fc1b2910fe1a135bc5c942d87da0afa0df9983b200ff46418aa5cde21a1e",
+        "config/settings.yaml": "117561726785eccc72186c8b011672d424e79930a4faa3c356d61f7868a48c56",
+        "references/usage.md": "593bbb8e14aa2a456b12d7c3835fe19c8b2d3e32bfddaa7c565fcd7e2b9543fa",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "83e2dbed0a9359e33daab5e3e18d86d2632a0cd8688f8cf4e5263f61af1985b0"
+      },
+      "relative_path": "controlled_skills/pilot-data-profile/base",
+      "sha256": "6ab4625ca8c5db8aea711d32890b734753b70111e5a20e3733dda5e5945b9161",
+      "snapshot_id": "pilot-data-profile:base:6ab4625ca8c5",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-data-profile",
+      "files": {
+        "SKILL.md": "4c27fde577e9baba4eec717598cda8f78e953ec23b12143374106240130c6aac",
+        "config/settings.yaml": "117561726785eccc72186c8b011672d424e79930a4faa3c356d61f7868a48c56",
+        "references/usage.md": "72dbb1abaef5db01f6686f380f76a7637ceaff28084ff884689dd2b5c16691e6",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "83e2dbed0a9359e33daab5e3e18d86d2632a0cd8688f8cf4e5263f61af1985b0"
+      },
+      "relative_path": "controlled_skills/pilot-data-profile/benign_update",
+      "sha256": "193e410acad7c7ab78614d2abbd79c075c84c0f3def9cf2f4ee0325a616fdde1",
+      "snapshot_id": "pilot-data-profile:benign_update:193e410acad7",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-data-profile",
+      "files": {
+        "SKILL.md": "18baacbaa19ff38da082d6e42c10cec03022c6f6ac7e17fe7b97cf778335dcec",
+        "config/settings.yaml": "8199698d8230bd8a219b66afb80488fe64ea5fed0e223d60a1f9d6e34fc9e2a9",
+        "references/usage.md": "28884c770035e4861de03e65b417aecd55d014761480179600afcd736470a274",
+        "scripts/helper.py": "89f87baf21a1ae48a8bf36a291da140e8073bb553eee9577386bb39bca184e6b",
+        "scripts/main.py": "fb83315a4440ca596ba8d6e1c0c832545bfbe628a675ce4d0f2b1c180bd140d6"
+      },
+      "relative_path": "controlled_skills/pilot-data-profile/malicious_update",
+      "sha256": "c38266f49ff49e21c28f1da0e2f2f60fade945f3e67e3f1f2cc0f95e2915340a",
+      "snapshot_id": "pilot-data-profile:malicious_update:c38266f49ff4",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-data-validate",
+      "files": {
+        "SKILL.md": "a54bda8d747cdcc09dc2e4cc6e859df454b49498432fc595c4ff5e082b26845a",
+        "config/settings.yaml": "6a2098d99e479a54a6717bc86608e3a18f6e9faa97ca2fa2290546db334213c1",
+        "references/usage.md": "3d1e1264f053f29b9c4894d1ca4cc3aa83886627a7abcfce7e0656fcd2bbdef6",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "64996aeb1705aa5ffb6ccec045385d618684dc5d314548d215b4cfe95f210543"
+      },
+      "relative_path": "controlled_skills/pilot-data-validate/base",
+      "sha256": "3b4495e65765aa27aea31094d859abb3c00e6f05878297e916f0f395f33d5c98",
+      "snapshot_id": "pilot-data-validate:base:3b4495e65765",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-data-validate",
+      "files": {
+        "SKILL.md": "d87139016d808366c17d4f49255fa16d8a5a2eced14d8cd3a65ed6447338e70b",
+        "config/settings.yaml": "4b33c33612ab688dda00a722aa09a01392e9a24726fcb76ad9e963954fa13bf1",
+        "references/usage.md": "3d1e1264f053f29b9c4894d1ca4cc3aa83886627a7abcfce7e0656fcd2bbdef6",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "64996aeb1705aa5ffb6ccec045385d618684dc5d314548d215b4cfe95f210543"
+      },
+      "relative_path": "controlled_skills/pilot-data-validate/benign_update",
+      "sha256": "bd4d3035593e94268852e5a462358b3c367127ff84e8d0917cec080a87e59256",
+      "snapshot_id": "pilot-data-validate:benign_update:bd4d3035593e",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-data-validate",
+      "files": {
+        "SKILL.md": "d56f84278c43b6fd153697a470c88f3b9b1f358fa2ae1314a9791d2fb36dcfa1",
+        "config/settings.yaml": "96226e0dd5bdb19483ed3b005d232e6d5ebe937b4bc40744949ddb8fa684dca9",
+        "references/usage.md": "e0e76b79a0829655590116380a944eb39fb0c26ed69049ec577edc6a3528b830",
+        "scripts/helper.py": "fae1ee65241d9a29290b868989ccfdecc2ec8cd46f3cac3db8cf64fa5038e296",
+        "scripts/main.py": "1ab786a8ee0efcc87b4f9306a74c3ad7c071c9cce442471c1b295e82797556ac"
+      },
+      "relative_path": "controlled_skills/pilot-data-validate/malicious_update",
+      "sha256": "a961bd71502b8f401a9270c9d28c5a02fde367cb84479ab3b3295c99f141f973",
+      "snapshot_id": "pilot-data-validate:malicious_update:a961bd71502b",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-document-convert",
+      "files": {
+        "SKILL.md": "72fba9c65b0cdf5d6cbd4800ced9362e80bc08d1a18e4ee8b148f9308072ae78",
+        "config/settings.yaml": "678daae1c969b652fa2e43e117b71147fe069525bf8b662179e5ccf0b667a772",
+        "references/usage.md": "2404ec5c1fed0744498408d3ab8bd17d00f706551abe842e38a953553a446bed",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "a2897da88a3a66d29b9e32a2d08e96d51bf355556f8aed9bf74a4581be361476"
+      },
+      "relative_path": "controlled_skills/pilot-document-convert/base",
+      "sha256": "8ddaf3e95b5d543dfc15101b7fb23cea00b43dd142011ecefb65a7a9f15a914c",
+      "snapshot_id": "pilot-document-convert:base:8ddaf3e95b5d",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-document-convert",
+      "files": {
+        "SKILL.md": "8c175adc85f9c75740a924ce1643e0f9506326d6d659cb821f37fb12c29b1374",
+        "config/settings.yaml": "13811399c54555331f79b39f375ba2bfa24583df98b9df21a22675a508c40ae6",
+        "references/usage.md": "2404ec5c1fed0744498408d3ab8bd17d00f706551abe842e38a953553a446bed",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "a2897da88a3a66d29b9e32a2d08e96d51bf355556f8aed9bf74a4581be361476"
+      },
+      "relative_path": "controlled_skills/pilot-document-convert/benign_update",
+      "sha256": "dc6c7b1989f6c7764e4f8dd25441f6c72320f34b9ae4a745fd2bdb054b301d0f",
+      "snapshot_id": "pilot-document-convert:benign_update:dc6c7b1989f6",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-document-convert",
+      "files": {
+        "SKILL.md": "df4737dcd40ed8a1a5149cbfde93280e07257b524211fdf27a57c50e7bff3cd3",
+        "config/settings.yaml": "c87227893ed0afa4694c04bf96d0500dffb95cc6bbf9a8e7c621dfc4b62d0c99",
+        "references/usage.md": "1df7aa64ce20c18a8ca3c00ca0ed3943744f2efdc286cc34dac05f3e1b95a8f8",
+        "scripts/helper.py": "dc3a095b7ef43e34906d9babb059d66cde6cba50579b7f2792e54d7ff686371d",
+        "scripts/main.py": "5756a79532567a92bd70450964c8fb99c0635d2116efeb2d420c999246567049"
+      },
+      "relative_path": "controlled_skills/pilot-document-convert/malicious_update",
+      "sha256": "ab524a19c741d968eb21d1abf608e9e057c8be42e9e80d935a50d453954fe2b1",
+      "snapshot_id": "pilot-document-convert:malicious_update:ab524a19c741",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-document-review",
+      "files": {
+        "SKILL.md": "a9505d36bb699e2a481afa3961d962abef61fd8de75d022f0695ec21e676fb9a",
+        "config/settings.yaml": "fa46391a7d23407327dc43e44020617fd15f4fc1a51a051af6a02447784930a0",
+        "references/usage.md": "88ddccb1c4f5dd47e524d11ba8a46496b1dc14bb4ab850f98e5b01b6c25f616c",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "4e13e3be7d40f636b5dec1b00333d9dd58da1717e083e380429a06eb23b6eb57"
+      },
+      "relative_path": "controlled_skills/pilot-document-review/base",
+      "sha256": "0bbf67fa073497f03547ecc9962740d00ea07549550de8e2b600a1d6dc8538d9",
+      "snapshot_id": "pilot-document-review:base:0bbf67fa0734",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-document-review",
+      "files": {
+        "SKILL.md": "7eb8b5a6d732cdfac5d98a6f999118722e994ff1f2cdc38b6234ccea1fd366c5",
+        "config/settings.yaml": "fa46391a7d23407327dc43e44020617fd15f4fc1a51a051af6a02447784930a0",
+        "references/usage.md": "88ddccb1c4f5dd47e524d11ba8a46496b1dc14bb4ab850f98e5b01b6c25f616c",
+        "scripts/helper.py": "fab3b9dacff61ebe7be52121e5621e066ab6bb0588943b6913f7d9fbf7d892dc",
+        "scripts/main.py": "4e13e3be7d40f636b5dec1b00333d9dd58da1717e083e380429a06eb23b6eb57"
+      },
+      "relative_path": "controlled_skills/pilot-document-review/benign_update",
+      "sha256": "c7fd7f40e08ca3667ebde676bbe7ec229994ac94f751db5d5edc973e8c2a732d",
+      "snapshot_id": "pilot-document-review:benign_update:c7fd7f40e08c",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-document-review",
+      "files": {
+        "SKILL.md": "43909d17dc33b3e07f54fa42093ffe3f23ce4b4b0914980ed191a292a01c18a4",
+        "config/settings.yaml": "4f740d32ec492bb2edf05d27f0ef0d24de3939fa54eb1198908a33c3208f0e57",
+        "references/usage.md": "9123c76fd7e71a6a58aaf4c4e6169bf2781944a1a49e6fb4906b4b6d8619bd97",
+        "scripts/helper.py": "08ff803271e2bde55aee52e1d9d426384123f875a98d228966b3a87ca22ce7eb",
+        "scripts/main.py": "5d2295175e4627a67d382219baf9afc26ab9098103a842cbbdb901a40c8c6a69"
+      },
+      "relative_path": "controlled_skills/pilot-document-review/malicious_update",
+      "sha256": "d09e79b0655701005733d92ef339c291fee4dc53b3767078bbccff7b3219acf6",
+      "snapshot_id": "pilot-document-review:malicious_update:d09e79b06557",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-document-summarize",
+      "files": {
+        "SKILL.md": "3c8236fc795a38962af3f845678163b4aa27031eb1739123270944d96b443fe7",
+        "config/settings.yaml": "29378e6ad40f431f7892c42e9947266b0f9a6cbe3486fe9126bacf84a674e588",
+        "references/usage.md": "292f9501f858138d972034a092130c63c2d610858dd8fb4ad8bf6c811bd92743",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "17a42cc09773dee8147b4e0c3232394555818a70e2d84aab21c1fde91e5290d0"
+      },
+      "relative_path": "controlled_skills/pilot-document-summarize/base",
+      "sha256": "798b9661ff2f7a18a2e1bb5abe2077905110b59861de83a91a0a0787d982e659",
+      "snapshot_id": "pilot-document-summarize:base:798b9661ff2f",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-document-summarize",
+      "files": {
+        "SKILL.md": "19cddd5acdc662f380d9ca68987e89f86d37fdcdfcc00a4e8c40a10129e05c76",
+        "config/settings.yaml": "29378e6ad40f431f7892c42e9947266b0f9a6cbe3486fe9126bacf84a674e588",
+        "references/usage.md": "e6ae9dab49f1814cc59e87041a7fb68f42c8f8e47ec181454b959389f6e9a0c4",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "17a42cc09773dee8147b4e0c3232394555818a70e2d84aab21c1fde91e5290d0"
+      },
+      "relative_path": "controlled_skills/pilot-document-summarize/benign_update",
+      "sha256": "80eb2476d5eb4b9566d1f29fbfe4f3644dfd92911bd0380aa0a400e9a750f187",
+      "snapshot_id": "pilot-document-summarize:benign_update:80eb2476d5eb",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-document-summarize",
+      "files": {
+        "SKILL.md": "2ee742ad20eebfee3e81a69d3958f1fc9127acb93c4b0e7fd38842e02b9fdafc",
+        "config/settings.yaml": "03e3fe1ae2b1a3e0acb2390bf06dfea44fdd22d98bae7287bf7f1c8148818e1a",
+        "references/usage.md": "b3557d731f22283a366014a66e9fd87b949c1687c93cdfd05c37af14f7cfd926",
+        "scripts/helper.py": "7de7e8f805823999ecd21c48970b9ba28642889ba2590482ab94ef3a9bbc5b05",
+        "scripts/main.py": "2f910370ff8749cea33e98bc56208e77190fada5c8a3634fd9064a6d3c930dc1"
+      },
+      "relative_path": "controlled_skills/pilot-document-summarize/malicious_update",
+      "sha256": "2e4fb0b844bcd0bc35fd0b84460e27b0c2f200acf6cbf04e0547f13cf767ef1f",
+      "snapshot_id": "pilot-document-summarize:malicious_update:2e4fb0b844bc",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-document-template",
+      "files": {
+        "SKILL.md": "26695f48b6fa9d7500d891e5f25f3ed3b18c247cbfbb28745c44854d35cf82db",
+        "config/settings.yaml": "e48ab48760af490dd9abe185ac449615a0f85ee4af8b963cad2e416f2d676990",
+        "references/usage.md": "f8ae245e9b866e43bca7c202d97a647e72e1bb66552f9d521fa73d5b8ebca13b",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "3954b8390c8770cdc62575ceaa397c881f191f5d7a133b5a64005e12eaf49f87"
+      },
+      "relative_path": "controlled_skills/pilot-document-template/base",
+      "sha256": "8e17b8af818e6366c22bb1e3c0dc18d7c4aebd687d60d7ff745112915b7b299d",
+      "snapshot_id": "pilot-document-template:base:8e17b8af818e",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-document-template",
+      "files": {
+        "SKILL.md": "dced96d21c238587d8c110a3700211fba4f861ad8f3265491e3acd4b6886283a",
+        "config/settings.yaml": "5787991e371a08c0e190c15f3750f67454cfb07d53c485238f19ef7e15d7a232",
+        "references/usage.md": "f8ae245e9b866e43bca7c202d97a647e72e1bb66552f9d521fa73d5b8ebca13b",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "7e747bcccfda17ada06a1eafc80bd80ebc871110bf0b823b64f0fec475ee4139"
+      },
+      "relative_path": "controlled_skills/pilot-document-template/benign_update",
+      "sha256": "df1e62199cebae09c317e61b57180e0607ee825dddcabf4f2700c163393bcdad",
+      "snapshot_id": "pilot-document-template:benign_update:df1e62199ceb",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-document-template",
+      "files": {
+        "SKILL.md": "8cf17b7dbaf7574e039c0afbbac1971b35c6f2ac66155121d54755a690d9a5a2",
+        "config/settings.yaml": "43e4e971bd211a1942fb153c189ec218997cc991951987f89086bae06488f823",
+        "references/usage.md": "0d86c1f894601847d367d7ce17be6abdcea2494134d8a11b8ba470ee212774bf",
+        "scripts/helper.py": "fae1ee65241d9a29290b868989ccfdecc2ec8cd46f3cac3db8cf64fa5038e296",
+        "scripts/main.py": "1ab786a8ee0efcc87b4f9306a74c3ad7c071c9cce442471c1b295e82797556ac"
+      },
+      "relative_path": "controlled_skills/pilot-document-template/malicious_update",
+      "sha256": "f402e6acc3333f86a40da164ce4ed2bbf8f4117ead21121345743ce4513ac29e",
+      "snapshot_id": "pilot-document-template:malicious_update:f402e6acc333",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-image-caption",
+      "files": {
+        "SKILL.md": "ea1c96766e0835fd01648a58ae590e594bf7295e77e9b80472b3675ca2f20a9d",
+        "config/settings.yaml": "870d15fca3f0c2e0a69a40a305103abb1d665faa5e5682becdf82126c45da6d4",
+        "references/usage.md": "fe0518b501d2fca7a1d357f6f4235c131966af4c0b8554214b1d0218a7377e93",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "821eccbb3e1ea673057561d01ae6d4e37d3588584641921529c46d87e2839924"
+      },
+      "relative_path": "controlled_skills/pilot-image-caption/base",
+      "sha256": "c12f32b4b66f0fade6c45fdd8c89fddd729c35cf69cccd7ff91cb1a95bf85f61",
+      "snapshot_id": "pilot-image-caption:base:c12f32b4b66f",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-image-caption",
+      "files": {
+        "SKILL.md": "5afe1b8e2e63eaca9803873870fc7ed70bf40f090243f1c6604ea27c81e7d678",
+        "config/settings.yaml": "9a15d6ced09e42986234868843daa39b1e008e657500cee92631cfed60f20356",
+        "references/usage.md": "fe0518b501d2fca7a1d357f6f4235c131966af4c0b8554214b1d0218a7377e93",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "78e825f0e6ffa5ebe1d3ea6efc5eb9aea43bb1a1a16248e9b9af481c0ffbf3d8"
+      },
+      "relative_path": "controlled_skills/pilot-image-caption/benign_update",
+      "sha256": "c582266d3b36db7291f8ec8e39c67f82e84cd4f227a4acdf713f6788b4001f60",
+      "snapshot_id": "pilot-image-caption:benign_update:c582266d3b36",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-image-caption",
+      "files": {
+        "SKILL.md": "3f178df22be026a8a2e1152dadb0be8c47a45d50bf9b6e3bd73f32d01d3c9502",
+        "config/settings.yaml": "89f73269ff40bad7a402a2ff1bcb157b7191b90d1f383a1cb9455fb56c478d8c",
+        "references/usage.md": "ac5124c53dcf6103f01ed856d875443095b288f377b1650d315b38dcf318bf5f",
+        "scripts/helper.py": "dc3a095b7ef43e34906d9babb059d66cde6cba50579b7f2792e54d7ff686371d",
+        "scripts/main.py": "5756a79532567a92bd70450964c8fb99c0635d2116efeb2d420c999246567049"
+      },
+      "relative_path": "controlled_skills/pilot-image-caption/malicious_update",
+      "sha256": "efed9f033a3b954e16cb825ee5aeb861cb805e377f1ddb3ed6d752e4d61398a1",
+      "snapshot_id": "pilot-image-caption:malicious_update:efed9f033a3b",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-image-organize",
+      "files": {
+        "SKILL.md": "3886f34345655f07aebd72ab0aef5d5f474d2c8b3b89e6e56cb34abac8576cdd",
+        "config/settings.yaml": "d0bf47172af21665d85cd59bc6692d02f285a46349ddacd69c45229f0def37e2",
+        "references/usage.md": "2559aaa57a8e3d8746860bfeea8024a61950a4096153411761283711f9bf378a",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "b7616073c1b0d95245cfd2fe5c3485ecf17f25dc71ca27c2311717ca26f503e8"
+      },
+      "relative_path": "controlled_skills/pilot-image-organize/base",
+      "sha256": "0856127241da18062e170de658c332a16870caee006bcd37e5612c6bc29338f2",
+      "snapshot_id": "pilot-image-organize:base:0856127241da",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-image-organize",
+      "files": {
+        "SKILL.md": "459eb9d0766116a0ba45df7681ca93b4dcf315e2f66ad06a383cfdfdeb57bb0b",
+        "config/settings.yaml": "d0bf47172af21665d85cd59bc6692d02f285a46349ddacd69c45229f0def37e2",
+        "references/usage.md": "2559aaa57a8e3d8746860bfeea8024a61950a4096153411761283711f9bf378a",
+        "scripts/helper.py": "fab3b9dacff61ebe7be52121e5621e066ab6bb0588943b6913f7d9fbf7d892dc",
+        "scripts/main.py": "b7616073c1b0d95245cfd2fe5c3485ecf17f25dc71ca27c2311717ca26f503e8"
+      },
+      "relative_path": "controlled_skills/pilot-image-organize/benign_update",
+      "sha256": "d5255636d3afcf78158eb53f837aecdcfc0b5f49b3ceb465cd1aef59a336749b",
+      "snapshot_id": "pilot-image-organize:benign_update:d5255636d3af",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-image-organize",
+      "files": {
+        "SKILL.md": "847db099e9299b0d4fa97988f4913613d3cb48821e379175e3f31091365e191b",
+        "config/settings.yaml": "3665cc506d278f592a63cf38a799b6817beb4ccf16633215dc981fbe3a6fbb76",
+        "references/usage.md": "d51e05fab348d723ee9fd876a7fbf8e7195167b0c80a97fcfe76c689ab9c4ce0",
+        "scripts/helper.py": "89f87baf21a1ae48a8bf36a291da140e8073bb553eee9577386bb39bca184e6b",
+        "scripts/main.py": "fb83315a4440ca596ba8d6e1c0c832545bfbe628a675ce4d0f2b1c180bd140d6"
+      },
+      "relative_path": "controlled_skills/pilot-image-organize/malicious_update",
+      "sha256": "5e5969fd4f0d2a6e71514dff5232fa62fd2101f4b8ced49bd9ec8ef3258f1e8b",
+      "snapshot_id": "pilot-image-organize:malicious_update:5e5969fd4f0d",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-image-resize",
+      "files": {
+        "SKILL.md": "247647bba7ae52cd5fbab979bb5f13a82a7af5307b4a6232579022a5973009f9",
+        "config/settings.yaml": "024374740f5ef05697205766e5d10c62343c31d1cd11e27c54c87cfa034deaf6",
+        "references/usage.md": "fcbc4ebeba0d430c85e6d9b0036972915756ec01a12024adeacd2802480b0da7",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "e31a49070a769cbb988620ac37ffeb1385b87bf663f6a4025fa7d8590be97992"
+      },
+      "relative_path": "controlled_skills/pilot-image-resize/base",
+      "sha256": "b9677c7a9c22c965f8c466907cc1cb46ec291a3825dd18e0fb16a8e1fbca44af",
+      "snapshot_id": "pilot-image-resize:base:b9677c7a9c22",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-image-resize",
+      "files": {
+        "SKILL.md": "98966169e282a08364cb31e635826f90456fcd37ccd4e3391c616251d8a26056",
+        "config/settings.yaml": "024374740f5ef05697205766e5d10c62343c31d1cd11e27c54c87cfa034deaf6",
+        "references/usage.md": "04dd326a0cb722c20f59d1d6405c0e93aeeb5cdbc13a78a19f5bc5f3cef9454c",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "e31a49070a769cbb988620ac37ffeb1385b87bf663f6a4025fa7d8590be97992"
+      },
+      "relative_path": "controlled_skills/pilot-image-resize/benign_update",
+      "sha256": "dac883946831ac5a6b0bacb2c3521d37edb479c6c744dae39b490aa71bc5b5c3",
+      "snapshot_id": "pilot-image-resize:benign_update:dac883946831",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-image-resize",
+      "files": {
+        "SKILL.md": "0efb73feecfb584c145a136e751c5a143fab8cec932abe42529e49d155cda3b7",
+        "config/settings.yaml": "e61817858d4516431a57520c31a5c4fc6774dbb49f28a77b849f52bdfb9b95ba",
+        "references/usage.md": "4a75246d6d8647f8f4a46857fbe33973d56b6c68287faa6dbbd4109e1adf7747",
+        "scripts/helper.py": "08ff803271e2bde55aee52e1d9d426384123f875a98d228966b3a87ca22ce7eb",
+        "scripts/main.py": "5d2295175e4627a67d382219baf9afc26ab9098103a842cbbdb901a40c8c6a69"
+      },
+      "relative_path": "controlled_skills/pilot-image-resize/malicious_update",
+      "sha256": "8119af84890797f164a0816aa7a876e6def6acb3c4e72fbccb14c37a8635b91d",
+      "snapshot_id": "pilot-image-resize:malicious_update:8119af848907",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-image-watermark",
+      "files": {
+        "SKILL.md": "bf72450d3cebf8cc856a345b8f0e6eec74a1348d14d85b92d25767c71e2ee6dd",
+        "config/settings.yaml": "890a387b08f879631f9b8c3c04df613803782562fa2a19cd5d6fde9fa6a4ce16",
+        "references/usage.md": "f41889a7d106b2058e059392780d39b6aab890d30677668604e2e8013f2631e3",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "c8270cbf61a0bc96874db91cb7129d16c237940c8a6880000fc7a6dbdb546800"
+      },
+      "relative_path": "controlled_skills/pilot-image-watermark/base",
+      "sha256": "532bac2798aea606d0534ab157a7edd8673893d9a8dba24bcd74f47b90c9c9d3",
+      "snapshot_id": "pilot-image-watermark:base:532bac2798ae",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-image-watermark",
+      "files": {
+        "SKILL.md": "4100c271d84741c91f396407728c65cb201a12c207a53535e816c4a232d33bf7",
+        "config/settings.yaml": "ae68a9055e840eb1bdf2bcf51a4334fc00f308bfaa083acef2afdbafd633cfab",
+        "references/usage.md": "f41889a7d106b2058e059392780d39b6aab890d30677668604e2e8013f2631e3",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "c8270cbf61a0bc96874db91cb7129d16c237940c8a6880000fc7a6dbdb546800"
+      },
+      "relative_path": "controlled_skills/pilot-image-watermark/benign_update",
+      "sha256": "21be92fc968132d866805136b3555f85a54c01fe738c5e1e27522da3e1f97d2d",
+      "snapshot_id": "pilot-image-watermark:benign_update:21be92fc9681",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-image-watermark",
+      "files": {
+        "SKILL.md": "5421f0c797eb760f7f2bcf28e82ce7e491749dfca4097e0734d86cb3f12f22e3",
+        "config/settings.yaml": "46b3a045a8845937cad80bc17bb75334caec85c676fda676cd56051867dc2e71",
+        "references/usage.md": "183cf2d1633b2f1d0908b1d6bad0a089889ff7d5e2804cd829e5f3790deaef95",
+        "scripts/helper.py": "d4281305f609e358905cee652644e5a786c637119cf8dae61f21a1bc9f0a4012",
+        "scripts/main.py": "f549bc86b5ff3b3c71f769679a94dfea1a8ae033341091330883aad2f1d7a801"
+      },
+      "relative_path": "controlled_skills/pilot-image-watermark/malicious_update",
+      "sha256": "b76065d9001965ac1db021150f9c2bebc8db2cef4df22e74a14aea1a411c6835",
+      "snapshot_id": "pilot-image-watermark:malicious_update:b76065d90019",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-merge",
+      "files": {
+        "SKILL.md": "3e083608d60625fa84d484eff35f892f28ba5175f3681f56183517f8d9a8f572",
+        "config/settings.yaml": "e7704d2ed7d98d6d2adaf3700dabece9a697a333e3492ac9f5d361bd5bbcf9b2",
+        "references/usage.md": "f8c26a07f0cdbb6e6f671a7290241c4c5d5efe5b40a50e8e9ed16ef0eeb02d01",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "f50603458edcc778f072618e75e3c4645dbfab43ad295924d41e2c3730674215"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-merge/base",
+      "sha256": "123316a4951c7f93267221006c60aa920d433e2451b71f88b7ddadff7a263162",
+      "snapshot_id": "pilot-pdf-merge:base:123316a4951c",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-pdf-merge",
+      "files": {
+        "SKILL.md": "6415d678b5e13cec544147a3df74cf9ea29cedbade6efd972a6fd610894791a2",
+        "config/settings.yaml": "e7704d2ed7d98d6d2adaf3700dabece9a697a333e3492ac9f5d361bd5bbcf9b2",
+        "references/usage.md": "2e6aa8791922a98f3068fdfe4651fd7d4135944599051bfab33dea54fecd4c30",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "f50603458edcc778f072618e75e3c4645dbfab43ad295924d41e2c3730674215"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-merge/benign_update",
+      "sha256": "34a478b39186d7660b2a76fc43044952ef7a5df05116bfec5f08fdbcc6c0e40c",
+      "snapshot_id": "pilot-pdf-merge:benign_update:34a478b39186",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-merge",
+      "files": {
+        "SKILL.md": "6c1aee5eaaba7472faffd85171a6fc634b8d0bdcdd3fc71e0f3f98ebc191adb5",
+        "config/settings.yaml": "a9e5266246efaec8d29002ed1240cee22e2df7f125892942a1c33d9c532b8d2b",
+        "references/usage.md": "f6aa198d9f88e5b1c40361800475ae2018e5217c030827bcf8f8a4f4826c8392",
+        "scripts/helper.py": "08ff803271e2bde55aee52e1d9d426384123f875a98d228966b3a87ca22ce7eb",
+        "scripts/main.py": "5d2295175e4627a67d382219baf9afc26ab9098103a842cbbdb901a40c8c6a69"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-merge/malicious_update",
+      "sha256": "58c5328a6742a03b4e26c0716594e2e5a66970f46895ed5423966129b7b11b79",
+      "snapshot_id": "pilot-pdf-merge:malicious_update:58c5328a6742",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-metadata",
+      "files": {
+        "SKILL.md": "5ce9f85d750667c51f98d35e794b342ba651783948d13ac20236136dbb7d88fa",
+        "config/settings.yaml": "d92a289ca08de3ba191f8545e50f42712476c22a314d0a2b89e7bb87deae09b3",
+        "references/usage.md": "6a985a84abfd6b729e9495cec89243831398569013e404230d90814ab80771c9",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "36b62ceb969a27ea3d185be24f39ee6d197d397794bbd12e22c5bf4548a65fd1"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-metadata/base",
+      "sha256": "0ed9998a742ca5dd1e80b6b1d8ac5b90b61948058f59d3d0ae28aa8e150f6e37",
+      "snapshot_id": "pilot-pdf-metadata:base:0ed9998a742c",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-pdf-metadata",
+      "files": {
+        "SKILL.md": "244a52db4bf2adfb7f60e5b42fb144cedb5c6c2212a28a3773daf387875e8928",
+        "config/settings.yaml": "3364ffe20b0812a8f0c2e1dca1839838f12f5646317d150961453a3f6e90df29",
+        "references/usage.md": "6a985a84abfd6b729e9495cec89243831398569013e404230d90814ab80771c9",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "219acb207bd59fc15729272c1ac0a918951513a222bdc4f9af9e181d34dfde3e"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-metadata/benign_update",
+      "sha256": "b240ce8ebbe6664215d69ccf2d2b6bb74a5b905278b8ac605bdc4bf69ad49283",
+      "snapshot_id": "pilot-pdf-metadata:benign_update:b240ce8ebbe6",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-metadata",
+      "files": {
+        "SKILL.md": "6f9d0acd5a3cba76ac47c3e68aace17dc360eb60bb514149b0673977af71bdfc",
+        "config/settings.yaml": "ae12b076c748eb5bc4ebc0b50d041cab6c28da9d194aac88accc290ac276b6b2",
+        "references/usage.md": "a33128ccfaec6bb900c168791aa55dd7f9560104e18030b165a76a44b2ce37b7",
+        "scripts/helper.py": "dc3a095b7ef43e34906d9babb059d66cde6cba50579b7f2792e54d7ff686371d",
+        "scripts/main.py": "5756a79532567a92bd70450964c8fb99c0635d2116efeb2d420c999246567049"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-metadata/malicious_update",
+      "sha256": "a8d81365fdc501ddd986c8cf91249ec0ef8fe6587a0c20fc3d4bdf89f5dd16a9",
+      "snapshot_id": "pilot-pdf-metadata:malicious_update:a8d81365fdc5",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-outline",
+      "files": {
+        "SKILL.md": "2cd19885e05138cf6a0fdd0a1297cbc3abd4f5935b686486658b9d8583f3d8ba",
+        "config/settings.yaml": "3cd23f9b17910dcfefa64e95323904df8adc79677f1e1b013928a3818752d7a6",
+        "references/usage.md": "7c792f48fe7c95fa98eb346e1838b2efb30a392197408e6c894fd30f47ffb3b6",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "947ae8bf7846a2514cd75c04dcaa0a473c68ebc6c2dc7a9afd3716378c91811e"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-outline/base",
+      "sha256": "a5814b54dc67f1fd1b3a0e42516726191fec9aca1c730f53e0bfbd99e7093242",
+      "snapshot_id": "pilot-pdf-outline:base:a5814b54dc67",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-pdf-outline",
+      "files": {
+        "SKILL.md": "53414353cc74c02b786d4bf5b116ac6435ee0f56893bdc262c2e69637f2258fc",
+        "config/settings.yaml": "3cd23f9b17910dcfefa64e95323904df8adc79677f1e1b013928a3818752d7a6",
+        "references/usage.md": "7c792f48fe7c95fa98eb346e1838b2efb30a392197408e6c894fd30f47ffb3b6",
+        "scripts/helper.py": "fab3b9dacff61ebe7be52121e5621e066ab6bb0588943b6913f7d9fbf7d892dc",
+        "scripts/main.py": "947ae8bf7846a2514cd75c04dcaa0a473c68ebc6c2dc7a9afd3716378c91811e"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-outline/benign_update",
+      "sha256": "e750d23733a2aa5de13b70c217d12914b012cef222b95827a98bb4f69bc001df",
+      "snapshot_id": "pilot-pdf-outline:benign_update:e750d23733a2",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-outline",
+      "files": {
+        "SKILL.md": "e786763e3d00f9c2e5034a63049001d89da017312e5d9148c5869d1251790a3a",
+        "config/settings.yaml": "41d49060b4d6dc56ba0b07c14f906ab2106ef803e76da700b6b102a6b7f76840",
+        "references/usage.md": "f46428d8d7edaf64f80dadc2b2731e30ecf56436c6f3b02d5162620dc53b9965",
+        "scripts/helper.py": "89f87baf21a1ae48a8bf36a291da140e8073bb553eee9577386bb39bca184e6b",
+        "scripts/main.py": "fb83315a4440ca596ba8d6e1c0c832545bfbe628a675ce4d0f2b1c180bd140d6"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-outline/malicious_update",
+      "sha256": "689c4652e2b5184570ec6e7a7462131ba76da6b58f2fdde7a266e06ed013f5a8",
+      "snapshot_id": "pilot-pdf-outline:malicious_update:689c4652e2b5",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-watermark",
+      "files": {
+        "SKILL.md": "45aeaefe9e8f6da9c3a683194e7b64f5647424645fb1810f6c3f68149fb5556d",
+        "config/settings.yaml": "fff381231dd718528c03eff56e0e6c88a990016d21cc72df0feaa439ed69cd74",
+        "references/usage.md": "042176366456f93390bc305036605a292a5eb5092fa04b1d1ca50aad47d1957d",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "977989d0ec08bea49651b73c4437fa75d22f7e33b3858cbfc30a4666d3c1ed4f"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-watermark/base",
+      "sha256": "354848e11d46aadf7f4bc522668f8b602b9ef2b830970baf28fb2ee591eeaea6",
+      "snapshot_id": "pilot-pdf-watermark:base:354848e11d46",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-pdf-watermark",
+      "files": {
+        "SKILL.md": "06c053703b88705b1f2b2e8025d48d75cae8950f142812eebedccfbafa049b34",
+        "config/settings.yaml": "0ee7f69f03f6336d8ef202cf239d1b522932ad6d1026be6f6bd86623172b5b14",
+        "references/usage.md": "042176366456f93390bc305036605a292a5eb5092fa04b1d1ca50aad47d1957d",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "977989d0ec08bea49651b73c4437fa75d22f7e33b3858cbfc30a4666d3c1ed4f"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-watermark/benign_update",
+      "sha256": "4f75d48754eb0809ec53ca832ecefe3a6b98b0cd86771e2c6fbf960691992df8",
+      "snapshot_id": "pilot-pdf-watermark:benign_update:4f75d48754eb",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-pdf-watermark",
+      "files": {
+        "SKILL.md": "42c7ff77b776a2021898b1c39e582cf9c46a136e743187eefc952b2fe6ddc6d3",
+        "config/settings.yaml": "caf0d7c3af53515c4a25802c8e58ac2ce8327a1dbd47169c6bc8ba7fbe7591f3",
+        "references/usage.md": "61554b9b825d9f6a3ba17fcf2a01af5d2c978f2baff2bc43cb81891732c4cd62",
+        "scripts/helper.py": "d4281305f609e358905cee652644e5a786c637119cf8dae61f21a1bc9f0a4012",
+        "scripts/main.py": "f549bc86b5ff3b3c71f769679a94dfea1a8ae033341091330883aad2f1d7a801"
+      },
+      "relative_path": "controlled_skills/pilot-pdf-watermark/malicious_update",
+      "sha256": "c805ed070bbc9cfb94541555b58421d39033e00a14204b1a5a73be2d7d5a1aca",
+      "snapshot_id": "pilot-pdf-watermark:malicious_update:c805ed070bbc",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-project-changelog",
+      "files": {
+        "SKILL.md": "51ecac572271e39e3eb2f54cb234b6e72175d98e551888ca69d999822bd2e5ae",
+        "config/settings.yaml": "c91b42011bbb8f257ce8261e728a038c56de09043bd03e395285d2ddb5fa23a5",
+        "references/usage.md": "295e555381a78e66fe7eecd0a420ac2bc2ac0ff1d53557d01bd94c528af46df6",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "e7b809a2aca7298d41c842bb4677d61c938edea97a2cf1e39609d3b3abadd9d1"
+      },
+      "relative_path": "controlled_skills/pilot-project-changelog/base",
+      "sha256": "e05548f8c254fd85c6ec0f86add5119d48598e9dd504de52dc9f888b7e047203",
+      "snapshot_id": "pilot-project-changelog:base:e05548f8c254",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-project-changelog",
+      "files": {
+        "SKILL.md": "c83caee9a00c28101c8c5a4168131a8fd67bd536021ca648ccb62102d43fff73",
+        "config/settings.yaml": "7fede1c90ae81d38bd2a7b0805e37cabe2f34caecf765dd2df1997cf16b725af",
+        "references/usage.md": "295e555381a78e66fe7eecd0a420ac2bc2ac0ff1d53557d01bd94c528af46df6",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "03bfa7ae0ee0461788faf0583943cad43e976b81fd4fb8dcfbfe720c4dfeed40"
+      },
+      "relative_path": "controlled_skills/pilot-project-changelog/benign_update",
+      "sha256": "64ada5637f9e4b7e58876a2f5a51282642f5fa8122362e7b6f5549003df2e74b",
+      "snapshot_id": "pilot-project-changelog:benign_update:64ada5637f9e",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-project-changelog",
+      "files": {
+        "SKILL.md": "b71c4b13f10dca23c407f355c76d7b7851b495e566379dfe8ce9fd8b761b1263",
+        "config/settings.yaml": "50a02cd6569f4284f7b5b62dcec14e00bcf2e9924e263987e3cda99a6240674b",
+        "references/usage.md": "88e7b5eb27415a66639f3182ebbc582c71b077122b300fcb58a15945b2c00c00",
+        "scripts/helper.py": "fae1ee65241d9a29290b868989ccfdecc2ec8cd46f3cac3db8cf64fa5038e296",
+        "scripts/main.py": "1ab786a8ee0efcc87b4f9306a74c3ad7c071c9cce442471c1b295e82797556ac"
+      },
+      "relative_path": "controlled_skills/pilot-project-changelog/malicious_update",
+      "sha256": "8c822ec5dcbca1989118e75b84091997cffd6b44bc075d2d506180eb73994bb1",
+      "snapshot_id": "pilot-project-changelog:malicious_update:8c822ec5dcbc",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-project-plan",
+      "files": {
+        "SKILL.md": "b8a134b9f82b37d751944351dd14257d36faec32dc95edd72453550e2504ccab",
+        "config/settings.yaml": "53b88100810689588457e42cc1a8cbed93e1900800a3270db4e5b5bb3fc956da",
+        "references/usage.md": "0ec9e540baca4fabe27638591891055a2335d6c776626ac039d30cdc8fd257ec",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "c1f3c5d070c0dd9a66822d6ccbe01ccd160a66860d37d96762102cfedfe56e2e"
+      },
+      "relative_path": "controlled_skills/pilot-project-plan/base",
+      "sha256": "7a1ca9ff3506bf805b6e0994d55681a56a2de03d04dca1a1a4083724f42ddd62",
+      "snapshot_id": "pilot-project-plan:base:7a1ca9ff3506",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-project-plan",
+      "files": {
+        "SKILL.md": "5af1aa08fd8d5ebdd01c60a3a7cc0fd1ac09e1249cd5987f958a2e99160804c2",
+        "config/settings.yaml": "3cf0828bb02c4a8924109cb3f52bafb25b1782c29de2a98555dffe826e422330",
+        "references/usage.md": "0ec9e540baca4fabe27638591891055a2335d6c776626ac039d30cdc8fd257ec",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "c1f3c5d070c0dd9a66822d6ccbe01ccd160a66860d37d96762102cfedfe56e2e"
+      },
+      "relative_path": "controlled_skills/pilot-project-plan/benign_update",
+      "sha256": "ab7c0d85933d0ba9c3abe9a9b66aa4ed3eee5c74f8200d23c1636d6adf1097d9",
+      "snapshot_id": "pilot-project-plan:benign_update:ab7c0d85933d",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-project-plan",
+      "files": {
+        "SKILL.md": "4868ea13155205131fe0636e8edc3e117e4f48c1fac4aca592167cd7969043ed",
+        "config/settings.yaml": "b3c73d19f89a014e886d8e967c6341e9b38ef11bb3d7ee99cf802c88386c59dc",
+        "references/usage.md": "b5516619a80a712a0d07b4a2eea69f2f9654fc107b27dd50b56b357b49e4b8f2",
+        "scripts/helper.py": "dc3a095b7ef43e34906d9babb059d66cde6cba50579b7f2792e54d7ff686371d",
+        "scripts/main.py": "5756a79532567a92bd70450964c8fb99c0635d2116efeb2d420c999246567049"
+      },
+      "relative_path": "controlled_skills/pilot-project-plan/malicious_update",
+      "sha256": "02a8491e53cceca605b2bcba661ebc8f6bd4ec6010c5bd63a3789558c90a81f3",
+      "snapshot_id": "pilot-project-plan:malicious_update:02a8491e53cc",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-project-scaffold",
+      "files": {
+        "SKILL.md": "3773b787f595bbff514684eb5db65f30738613c7a04dedb0df36ae63e971f116",
+        "config/settings.yaml": "576c2b59f1eb9dc44fa3f6f5e55401ffa3c6077253649f5280928735494b8e92",
+        "references/usage.md": "a9f78995b82630a3ee6227096b57d0fb24e025c64bd7a81fd65ba693ff5a9773",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "5961d5eba93738311ef6e9f25c8ddc2a193edd4b8d8e8c54d48b6d5b359d0c3b"
+      },
+      "relative_path": "controlled_skills/pilot-project-scaffold/base",
+      "sha256": "a009a607819d56ec05d428ba33085018693c28d88c514c0996eb6bf74152f903",
+      "snapshot_id": "pilot-project-scaffold:base:a009a607819d",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-project-scaffold",
+      "files": {
+        "SKILL.md": "b6b9737b153afc7abd2de94bf409429dcf8b45f10f6083573b70bcca550ff9f5",
+        "config/settings.yaml": "576c2b59f1eb9dc44fa3f6f5e55401ffa3c6077253649f5280928735494b8e92",
+        "references/usage.md": "e086b704766110a6540acacb134196f7efa36c62d93f29f8fc85ad3453cd07ea",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "5961d5eba93738311ef6e9f25c8ddc2a193edd4b8d8e8c54d48b6d5b359d0c3b"
+      },
+      "relative_path": "controlled_skills/pilot-project-scaffold/benign_update",
+      "sha256": "ab903d00d53c8ce98f11a3d572681d756be0ff9bbe5ce3c357bbacfd5a10d9d8",
+      "snapshot_id": "pilot-project-scaffold:benign_update:ab903d00d53c",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-project-scaffold",
+      "files": {
+        "SKILL.md": "273d84c6cc0611afb338a0dc1d78eba900e51edbb6d1a5fb4d81be3e45482d49",
+        "config/settings.yaml": "fb18f24841c925e175a60d9f22d63413bd7821fcf7319fe24cc42995790fd474",
+        "references/usage.md": "e837f13c1d9ff2c90eb1f45be98e9bc2272daab1bd30179cca3739e624e1be8f",
+        "scripts/helper.py": "7de7e8f805823999ecd21c48970b9ba28642889ba2590482ab94ef3a9bbc5b05",
+        "scripts/main.py": "2f910370ff8749cea33e98bc56208e77190fada5c8a3634fd9064a6d3c930dc1"
+      },
+      "relative_path": "controlled_skills/pilot-project-scaffold/malicious_update",
+      "sha256": "04e2c5d5f79f34a616b02b48c71e0ef0080696576719fff337deb5526048a452",
+      "snapshot_id": "pilot-project-scaffold:malicious_update:04e2c5d5f79f",
+      "variant": "malicious_update"
+    },
+    {
+      "base_skill_id": "pilot-project-status",
+      "files": {
+        "SKILL.md": "2c93ef6772d81549b03cd4fb4deecc629f07c2c6c9eb47873c8bc023690e1bfd",
+        "config/settings.yaml": "cba94b1dc13d1f8ed76ef3e2b08ddd351600934fb7612fda217be7fc672dba64",
+        "references/usage.md": "e1a274a4b0b59416d15eb25e370bffd30fc2677e43749d830d27723aac42722f",
+        "scripts/helper.py": "898acaf92a2b01dffaf728d67bce451e96dd29fcca3bb7fe4d940088ffa6c823",
+        "scripts/main.py": "438572627d1b734a5b5eae0e4e89b9b9cb82fc97c2a7b2432248c9f628957f3c"
+      },
+      "relative_path": "controlled_skills/pilot-project-status/base",
+      "sha256": "b9ecdfe01e69140788243354d0af4ff267f59b77cd7891dcc75aa3610765a090",
+      "snapshot_id": "pilot-project-status:base:b9ecdfe01e69",
+      "variant": "base"
+    },
+    {
+      "base_skill_id": "pilot-project-status",
+      "files": {
+        "SKILL.md": "574aa1212f8e94638ce48d5824fa80acdbe2fa7c22aa6f71d1348b76b5cb0c9d",
+        "config/settings.yaml": "cba94b1dc13d1f8ed76ef3e2b08ddd351600934fb7612fda217be7fc672dba64",
+        "references/usage.md": "e1a274a4b0b59416d15eb25e370bffd30fc2677e43749d830d27723aac42722f",
+        "scripts/helper.py": "fab3b9dacff61ebe7be52121e5621e066ab6bb0588943b6913f7d9fbf7d892dc",
+        "scripts/main.py": "438572627d1b734a5b5eae0e4e89b9b9cb82fc97c2a7b2432248c9f628957f3c"
+      },
+      "relative_path": "controlled_skills/pilot-project-status/benign_update",
+      "sha256": "ebd31b72a622922e9f3d8b6bd7996df6afadb5d2de1cad71f02337c76792c8cd",
+      "snapshot_id": "pilot-project-status:benign_update:ebd31b72a622",
+      "variant": "benign_update"
+    },
+    {
+      "base_skill_id": "pilot-project-status",
+      "files": {
+        "SKILL.md": "b143fe941bce4b3c60979d23d4985d2e039219df674c7321f79ffba55bc5bf0e",
+        "config/settings.yaml": "b4a1d50f5c6370a221b7baf7ee18ba9ebb77261444441802bf9dfb9cd752a65d",
+        "references/usage.md": "a0cf2efdba4a009d20031dd5f1135b39b7bca8be215d81e3a1cf013a7901606a",
+        "scripts/helper.py": "08ff803271e2bde55aee52e1d9d426384123f875a98d228966b3a87ca22ce7eb",
+        "scripts/main.py": "5d2295175e4627a67d382219baf9afc26ab9098103a842cbbdb901a40c8c6a69"
+      },
+      "relative_path": "controlled_skills/pilot-project-status/malicious_update",
+      "sha256": "0ccab6a67db60350e1f819225418a08da363ac74e2eb2f6a4253388039b04869",
+      "snapshot_id": "pilot-project-status:malicious_update:0ccab6a67db6",
+      "variant": "malicious_update"
+    }
+  ],
+  "source_type": "synthetic_controlled"
+}

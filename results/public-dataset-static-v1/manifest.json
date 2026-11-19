@@ -1,0 +1,18 @@
+{
+  "dataset_commit": "7af3c962202bdb34f5e7647c555fe29d6c83a85a",
+  "started_at": "2026-11-19T13:28:57.330505+00:00",
+  "mode": "STATIC_ONLY",
+  "llm_enabled": false,
+  "dynamic_enabled": false,
+  "seed": 20251117,
+  "pairs": 537,
+  "categories": {
+    "REAL_UPDATE_UNLABELED": 500,
+    "MALICIOUS_SOURCE_UPDATE": 36,
+    "CONFIRMED_INSTRUCTION_INTRODUCTION": 1
+  },
+  "clones_excluded_from_update_pairs": true,
+  "split": "OBSERVATIONAL_NO_TRAINING",
+  "accuracy_metrics": "NOT_IDENTIFIABLE: no verified benign snapshots or pair-level safety labels",
+  "code_sha256": "480b301ed38657481aac8e1a5230b994ecf1d8edea150b9dd9b149a9374d92bb"
+}

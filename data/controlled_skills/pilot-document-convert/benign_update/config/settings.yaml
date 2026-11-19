@@ -1,0 +1,11 @@
+version: 1
+category: Document
+operation: convert
+output_prefix: preview
+allowed_inputs: synthetic_only
+network: deny
+command_execution: deny
+# BENIGN_UPDATE: reasonable-permission-change
+allowed_output_directories:
+  - ./output
+  - ./cache

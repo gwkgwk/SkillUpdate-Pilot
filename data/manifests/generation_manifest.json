@@ -1,0 +1,8 @@
+{
+  "dataset_id": "skillupdatebench-pilot-v1",
+  "dataset_manifest_sha256": "166de6d9cf674c686ac9113abdeda0fe1c01ce91ef11bc4c9392ba902a7939a1",
+  "generator": "scripts/generate_skill_dataset.py",
+  "ground_truth_sha256": "4129d175e9d0d6d6e6feeb5052c99c6152a0fa4936473d23e4b9a1abe21a237a",
+  "seed": 20251117,
+  "splits_sha256": "5a268d87c4bb8073070181ca82535178c4491c5dd970fcce15d741de38089eee"
+}

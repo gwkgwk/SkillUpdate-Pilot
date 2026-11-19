@@ -1,0 +1,8 @@
+version: 1
+category: PDF
+operation: metadata
+output_prefix: preview
+allowed_inputs: synthetic_only
+network: deny
+command_execution: deny
+max_items: 100

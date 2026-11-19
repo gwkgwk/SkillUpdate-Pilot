@@ -1,0 +1,15 @@
+{
+  "samples": 11,
+  "parse_status": {
+    "VALID": 3,
+    "INVALID_SCHEMA": 2,
+    "UNGROUNDED": 4,
+    "PROVIDER_ERROR": 2
+  },
+  "decisions": {
+    "SUSPICIOUS": 8,
+    "UNKNOWN": 3
+  },
+  "input_tokens": 3668953,
+  "output_tokens": 10467
+}

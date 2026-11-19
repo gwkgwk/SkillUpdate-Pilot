@@ -1,0 +1,54 @@
+schema_version = "1"
+experiment_id = "REPLACE_ME"
+track = "task_b"
+status = "planned"
+research_question = "REPLACE_ME"
+hypothesis = "REPLACE_ME"
+operator = "REPLACE_ME"
+
+[source]
+git_commit = "REPLACE_ME"
+worktree_dirty = false
+upstream_manifest = "REPLACE_ME"
+
+[dataset]
+dataset_id = "REPLACE_ME"
+version = "REPLACE_ME"
+manifest_sha256 = "REPLACE_ME"
+split_policy = "grouped"
+group_key = "sample_family_id"
+label_provenance = "REPLACE_ME"
+
+[environment]
+image = "REPLACE_ME"
+image_digest = "REPLACE_ME"
+network_policy = "deny"
+sandbox_policy = "REPLACE_ME"
+
+[configuration]
+config_path = "REPLACE_ME"
+config_sha256 = "REPLACE_ME"
+random_seeds = []
+
+[llm]
+enabled = false
+provider = ""
+model = ""
+prompt_sha256 = ""
+
+[outputs]
+raw_directory = "REPLACE_ME"
+derived_directory = "REPLACE_ME"
+report_path = "REPLACE_ME"
+aggregation_command = "REPLACE_ME"
+
+[metrics]
+definitions_path = "REPLACE_ME"
+coverage_policy = "REPLACE_ME"
+
+[execution]
+started_at_utc = ""
+finished_at_utc = ""
+exit_status = ""
+failures = 0
+timeouts = 0

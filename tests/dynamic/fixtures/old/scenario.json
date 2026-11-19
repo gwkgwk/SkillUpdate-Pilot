@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "actions": [
+    {"action": "file_access", "target": "mockfs://workspace/input.txt"},
+    {"action": "tool_invocation", "target": "mock-tool://pdf-outline"}
+  ]
+}

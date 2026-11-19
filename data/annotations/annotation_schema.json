@@ -1,0 +1,31 @@
+{
+  "attack_types": [
+    "MALICIOUS_INSTRUCTION_INSERTION",
+    "SENSITIVE_DATA_ACCESS",
+    "DATA_TRANSMISSION_INTENT",
+    "UNAUTHORIZED_COMMAND_EXECUTION",
+    "CROSS_FILE_COLLABORATION",
+    "SAFETY_CONSTRAINT_REMOVAL"
+  ],
+  "required_fields": [
+    "update_id",
+    "base_skill_id",
+    "old_snapshot",
+    "new_snapshot",
+    "update_label",
+    "change_types",
+    "attack_types",
+    "evidence_files",
+    "evidence_locations",
+    "expected_attack_path",
+    "source_type"
+  ],
+  "schema_version": "1.0",
+  "source_types": [
+    "synthetic_controlled"
+  ],
+  "update_labels": [
+    "BENIGN",
+    "MALICIOUS"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "repository_url": "https://github.com/gwkgwk/skill-version-dataset.git",
+  "requested_branch": "main",
+  "commit_sha": "7af3c962202bdb34f5e7647c555fe29d6c83a85a",
+  "local_path": "data/skill-version-dataset",
+  "verified_at_utc": "2026-11-19T13:23:57.443291+00:00",
+  "tracked_files": 7649,
+  "git_fsck": "PASSED",
+  "worktree_status": "CLEAN",
+  "skill_execution": false,
+  "upstream_validation_scripts_executed": false,
+  "evaluation_integration": "NOT_YET_IMPORTED",
+  "label_policy": "Preserve upstream category and label limitations; real updates are not automatically benign and malicious-source membership is not proof of malicious update impact. Clone snapshots are not version pairs."
+}

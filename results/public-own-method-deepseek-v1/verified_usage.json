@@ -1,0 +1,10 @@
+{
+  "actual_response_count": 9,
+  "input_tokens": 533776,
+  "output_tokens": 10467,
+  "total_tokens": 544243,
+  "filter": "analysis.usage.estimated == false",
+  "request_preflight_budget_rejections": ["GSU-0294", "MSBU-0003"],
+  "supersedes_interpretation": "summary.json input_tokens includes preflight estimates and is not billed API usage",
+  "cost_usd": null
+}

@@ -1,0 +1,7 @@
+version: 1
+category: Project
+operation: plan
+output_prefix: preview
+allowed_inputs: synthetic_only
+network: deny
+command_execution: deny
