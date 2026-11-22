@@ -47,9 +47,9 @@ def classify(node: dict) -> set[str]:
     if kind=="Permission": result.add("PERMISSION_GRANT")
     if kind=="Endpoint" or attrs.get("external") is True: result.add("NETWORK_CONNECT")
     if kind=="Tool": result.add("TOOL_INVOCATION")
-    if re.search(r"\\b(open|read_text|read_bytes|read_file)\\b",label): result.add("FILE_READ")
-    if re.search(r"\\b(write_text|write_bytes|unlink|remove)\\b",label): result.add("FILE_WRITE")
-    if re.search(r"\\b(subprocess|popen|exec|system)\\b",label): result.add("PROCESS_EXECUTION")
+    if re.search(r"\b(open|read_text|read_bytes|read_file)\b",label): result.add("FILE_READ")
+    if re.search(r"\b(write_text|write_bytes|unlink|remove)\b",label): result.add("FILE_WRITE")
+    if re.search(r"\b(subprocess|popen|exec|system)\b",label): result.add("PROCESS_EXECUTION")
     if not result and kind=="Data": result.add("DATA_ACCESS")
     return result or ({"UNKNOWN"} if kind in {"Function","Tool"} else set())
 
@@ -105,7 +105,7 @@ class CapabilityAnalyzer:
         for entity,a_items,b_items in collections:
             def key(x):
                 d=x.model_dump(mode="json")
-                return d.get("semantic_key") or d.get("effect_id") or d.get("boundary_id")
+                return d.get("semantic_key") or ("::".join(str(d.get(k, "")) for k in ("owner_semantic_key", "direction", "data_type")) if entity == "PORT" else None) or d.get("effect_id") or d.get("boundary_id")
             a={key(x):x for x in a_items}; b={key(x):x for x in b_items}
             for k in sorted(set(a)|set(b)):
                 x,y=a.get(k),b.get(k)
