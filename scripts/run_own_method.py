@@ -1,5 +1,10 @@
-"""Bounded real-provider run of HSDA + behavior graph + P13 decision."""
+"""Bounded real-provider run of HSDA + behavior graph + P13 decision.
 
+Samples 5 user-attested benign controls and 5 controlled attack-content updates.
+The 47 tool-implementation safety regressions are kept out of this complete-Skill
+LLM pilot because they have a different input interface. No labels/oracles are
+sent to the analyzer.
+"""
 from __future__ import annotations
 
 import argparse
@@ -13,8 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from run_public_dataset import discover
-
+from run_public_dataset import DATASET_COMMIT, discover
 from skillupdate.behavior_graph import IncrementalBehaviorGraphAnalyzer
 from skillupdate.decision import DecisionEngine
 from skillupdate.hsda import HSDAAnalyzer
@@ -32,12 +36,13 @@ def run_pair(pair, output):
     graph = IncrementalBehaviorGraphAnalyzer().compare(
         directory / "old", directory / "new"
     )
-    # Task metadata excludes source categories, labels and dataset descriptions.
+    # Only old/new derived evidence enters the model package. No metadata,
+    # dataset label, cohort name, evidence/oracle, or selection reason is passed.
     package = build_analysis_package(
         pair["update_id"],
         {"identity": pair["family"]},
-        "See OLD source evidence and graph for declared functionality.",
-        "See NEW source evidence and graph for declared functionality.",
+        "Analyze OLD snapshot evidence and graph for declared functionality.",
+        "Analyze NEW snapshot evidence and graph for declared functionality.",
         hsda,
         graph,
     )
@@ -62,8 +67,6 @@ def run_pair(pair, output):
     decision = DecisionEngine().decide(package, hsda, graph, analysis)
     return {
         "update_id": pair["update_id"],
-        "category": pair["category"],
-        "label_scope": pair["label_scope"],
         "analysis": analysis.model_dump(mode="json"),
         "decision": decision.model_dump(mode="json"),
     }
@@ -76,51 +79,42 @@ def main(args):
             os.environ["DEEPSEEK_API_KEY"] = line.split("=", 1)[1].strip().strip("\"'")
     if not os.environ.get("DEEPSEEK_API_KEY"):
         raise ValueError("DEEPSEEK_API_KEY is not configured")
-    pairs = discover(ROOT / "data/skill-version-dataset")
-    rng = random.Random(20251117)
-    selected = []
-    for category in ("REAL_UPDATE_UNLABELED", "MALICIOUS_SOURCE_UPDATE"):
-        selected.extend(
-            rng.sample(
-                sorted(
-                    [p for p in pairs if p["category"] == category],
-                    key=lambda p: p["update_id"],
-                ),
-                5,
-            )
-        )
-    selected.extend(
-        p for p in pairs if p["category"] == "CONFIRMED_INSTRUCTION_INTRODUCTION"
+
+    pairs = discover(args.dataset_root.resolve())
+    rng = random.Random(20261123)
+    benign = sorted(
+        [p for p in pairs if p["category"] == "REAL_BENIGN_USER_ATTESTED"],
+        key=lambda p: p["update_id"],
     )
+    attacks = sorted(
+        [p for p in pairs if p["category"] == "CONTROLLED_ATTACK_CONTENT"],
+        key=lambda p: p["update_id"],
+    )
+    selected = rng.sample(benign, 5) + rng.sample(attacks, 5)
+
     output = args.output_root
     output.mkdir(parents=True, exist_ok=False)
-    (output / "manifest.json").write_text(
-        json.dumps(
-            {
-                "method": "HSDA_GRAPH_LLM_DECISION",
-                "model": "deepseek-flash",
-                "thinking": "disabled",
-                "seed": 20251117,
-                "max_requests": 11,
-                "max_output_tokens": 3000,
-                "max_input_tokens": 100000,
-                "timeout_seconds": 90,
-                "dynamic_verification": False,
-                "dataset_commit": "7af3c962202bdb34f5e7647c555fe29d6c83a85a",
-                "selection": [
-                    {"update_id": p["update_id"], "category": p["category"]}
-                    for p in selected
-                ],
-                "ground_truth_given_to_model": False,
-                "purpose": "First bounded real-model validation, not comparative performance",
-            },
-            indent=2,
-        )
-    )
+    (output / "manifest.json").write_text(json.dumps({
+        "method": "HSDA_GRAPH_LLM_DECISION",
+        "model": "deepseek-flash",
+        "thinking": "disabled",
+        "seed": 20261123,
+        "max_requests": 10,
+        "max_output_tokens": 3000,
+        "max_input_tokens": 100000,
+        "timeout_seconds": 90,
+        "dynamic_verification": False,
+        "dataset_commit": DATASET_COMMIT,
+        "selection": [{"update_id": p["update_id"]} for p in selected],
+        "ground_truth_given_to_model": False,
+        "purpose": "Bounded real-model smoke validation; not comparative performance evaluation",
+        "cohort_note": "5 user-attested benign controls + 5 controlled attack-content updates; 47 safety regressions excluded from this Skill-package-only model pilot.",
+    }, indent=2, ensure_ascii=False))
+
     results = []
     with (
         ThreadPoolExecutor(max_workers=2) as pool,
-        (output / "results.jsonl").open("w") as handle,
+        (output / "results.jsonl").open("w", encoding="utf-8") as handle,
     ):
         futures = {pool.submit(run_pair, p, output): p["update_id"] for p in selected}
         for future in as_completed(futures):
@@ -128,49 +122,24 @@ def main(args):
             try:
                 result = future.result()
             except (ValueError, OSError, RuntimeError, RecursionError) as error:
-                result = {
-                    "update_id": update_id,
-                    "state": "FAILED",
-                    "error_type": type(error).__name__,
-                }
+                result = {"update_id": update_id, "state": "FAILED", "error_type": type(error).__name__}
             results.append(result)
             handle.write(json.dumps(result, ensure_ascii=False) + "\n")
             handle.flush()
-            print(
-                json.dumps(
-                    {
-                        "completed": len(results),
-                        "update_id": update_id,
-                        "parse_status": result.get("analysis", {}).get("parse_status"),
-                        "snapshot_status": result.get("decision", {}).get(
-                            "snapshot_status"
-                        ),
-                    }
-                ),
-                flush=True,
-            )
-    from collections import Counter
+            print(json.dumps({
+                "completed": len(results),
+                "update_id": update_id,
+                "parse_status": result.get("analysis", {}).get("parse_status"),
+                "snapshot_status": result.get("decision", {}).get("snapshot_status"),
+            }), flush=True)
 
+    from collections import Counter
     summary = {
         "samples": len(results),
-        "parse_status": dict(
-            Counter(
-                r.get("analysis", {}).get("parse_status", "FAILED") for r in results
-            )
-        ),
-        "decisions": dict(
-            Counter(
-                r.get("decision", {}).get("snapshot_status", "FAILED") for r in results
-            )
-        ),
-        "input_tokens": sum(
-            r.get("analysis", {}).get("usage", {}).get("input_tokens", 0)
-            for r in results
-        ),
-        "output_tokens": sum(
-            r.get("analysis", {}).get("usage", {}).get("output_tokens", 0)
-            for r in results
-        ),
+        "parse_status": dict(Counter(r.get("analysis", {}).get("parse_status", "FAILED") for r in results)),
+        "decisions": dict(Counter(r.get("decision", {}).get("snapshot_status", "FAILED") for r in results)),
+        "input_tokens": sum(r.get("analysis", {}).get("usage", {}).get("input_tokens", 0) for r in results),
+        "output_tokens": sum(r.get("analysis", {}).get("usage", {}).get("output_tokens", 0) for r in results),
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary), flush=True)
@@ -178,6 +147,11 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--dataset-root",
+        type=Path,
+        default=ROOT / "data/skill-version-dataset",
+    )
     parser.add_argument(
         "--secret-file",
         type=Path,
